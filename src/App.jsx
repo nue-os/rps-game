@@ -24,36 +24,39 @@ const App = () => {
   const [count, setCount] = useState(null) // 카운트
 
   const handleUserChoice = userSelected => {
-    if (isPlaying) return
+    if (isPlaying) return // 이미 게임이 진행 중이면 무시
 
     // 이전 기록 초기화
     setUserChoice(null)
     setComputerChoice(null)
     setResult('?')
 
-    setIsPlaying(true)
-    setUserChoice(userSelected)
-    setCount(3)
+    setIsPlaying(true) // 게임 진행 중으로 변경
+    setUserChoice(userSelected) // 사용자 선택 저장
+    setCount(3) // 카운트다운 시작 (3초)
   }
 
   useEffect(() => {
     if (count === null) return
+    // 카운트가 0이 되면
     if (count === 0) {
-      const computerSelected = generateComputerChoice(choice)
-      setComputerChoice(computerSelected)
+      const computerSelected = generateComputerChoice(choice) // 컴퓨터 선택 생성
+      setComputerChoice(computerSelected) // 컴퓨터 선택 저장
 
-      const gameResult = determineWinner(userChoice, computerSelected)
-      setResult(gameResult)
+      const gameResult = determineWinner(userChoice, computerSelected) // 승부 결과 계산
+      setResult(gameResult) // 결과 저장
 
-      setIsPlaying(false) // 플레이 상태 리셋
+      setIsPlaying(false) // 게임 종료 상태로 변경
       setCount(null) // 카운트 리셋
       return
     }
 
+    // 타이머 (카운트가 0이 아닐 때, 1초마다 count를 1 감소)
     const timer = setTimeout(() => {
       setCount(prev => prev - 1)
     }, 1000)
 
+    // 클린업 함수 (타이머 정리)
     return () => clearTimeout(timer)
   }, [count, userChoice, choice])
 
