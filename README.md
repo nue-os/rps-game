@@ -2,7 +2,7 @@
 
 가위바위보 게임은 사용자와 컴퓨터가 각각 가위 / 바위 / 보를 선택해 승패를 겨루는 간단한 React 기반 게임입니다.
 
-![가위바위보 게임](image.png)
+<img src="https://github.com/user-attachments/assets/790fa7aa-1a71-440b-a085-51abbb910548" alt="가위바위보 게임" />
 https://rps-game-dun.vercel.app/
 
 <br />
