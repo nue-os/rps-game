@@ -1,0 +1,36 @@
+.btn {
+  border: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap1);
+  padding: var(--gap1) var(--gap2);
+  border-radius: var(--gap2);
+  border-left: 2px solid;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--gray-100);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn--scissors {
+  border-left-color: var(--green);
+}
+
+.btn--rock {
+  border-left-color: var(--blue);
+}
+
+.btn--paper {
+  border-left-color: var(--orange);
+}
+
+.btn img {
+  width: 40px;
+}

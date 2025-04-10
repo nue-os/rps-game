@@ -1,0 +1,32 @@
+@charset 'utf-8';
+/* 초기화용 스타일 시트 */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+/* 폰트 */
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: 'S-CoreDream-3Light', serif;
+  --blue-dark: #005c91;
+  --blue-light: #88c3ff;
+  --blue: #0082cd;
+  --orange-light: #ffbf7e;
+  --orange: #de7300;
+  --green: #00973f;
+  --gray-400: #2d2d2d;
+  --gray-300: #808080;
+  --gray-200: #d9d9d9;
+  --gray-100: #f2f2f2;
+  --gap1: 8px;
+  --gap2: 16px;
+  --gap3: 32px;
+}
+
+button {
+  all: unset;
+}

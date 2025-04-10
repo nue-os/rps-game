@@ -1,0 +1,58 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  gap: var(--gap3);
+}
+
+.app h1 {
+  font-size: var(--gap3);
+  font-weight: bold;
+}
+
+.main {
+  display: flex;
+  gap: var(--gap2);
+}
+
+.description {
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.btn__con {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap1);
+}
+
+.btn__con--common {
+  text-align: center;
+  padding: var(--gap1);
+  margin: 0 var(--gap1);
+  border-radius: var(--gap1);
+  font-weight: bold;
+}
+
+.btn__con span {
+  border: 1px solid var(--gray-200);
+}
+
+.btn__con .btn--retry {
+  background-color: var(--blue);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn__con .btn--retry:hover {
+  background-color: var(--blue-dark);
+}
+
+.btn__con .btn--retry:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,68 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid;
+  padding: var(--gap2) var(--gap3);
+  border-radius: var(--gap2);
+  gap: var(--gap2);
+  font-weight: bold;
+  min-width: 300px;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+}
+
+.card img {
+  width: 100px;
+}
+
+.user {
+  border-color: var(--blue);
+}
+
+.user > p {
+  color: var(--blue);
+}
+
+.user.win {
+  background-color: var(--blue-light);
+}
+
+.computer {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.computer.win {
+  background-color: var(--orange-light);
+}
+
+.lose {
+  opacity: 0.3;
+}
+
+.count {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: var(--gap2) 0;
+  animation: scaleUp 0.5s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
